@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAJESTIQ BEAUTY BAR</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f9fc;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+height:90vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+padding:20px;
+color:white;
+}
+
+header h1{
+font-size:60px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+header p{
+font-size:22px;
+margin-bottom:30px;
+opacity:.9;
+}
+
+button{
+
+padding:16px 40px;
+
+border:none;
+border-radius:50px;
+
+background:linear-gradient(135deg,#ff4d9d,#ff7ac8);
+
+color:white;
+font-size:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(255,70,150,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 40px rgba(255,70,150,.45);
+
+}
+
+/* Sections */
+
+section{
+
+padding:80px 8%;
+
+}
+
+h2{
+
+font-size:36px;
+
+margin-bottom:40px;
+
+text-align:center;
+
+color:#222;
+
+}
+
+/* Slider */
+
+.slider{
+
+display:flex;
+
+gap:30px;
+
+overflow:auto;
+
+scroll-snap-type:x mandatory;
+
+padding-bottom:15px;
+
+}
+
+.slide{
+
+scroll-snap-align:center;
+
+min-width:350px;
+
+height:230px;
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+font-weight:600;
+
+color:white;
+
+background-size:cover;
+
+background-position:center;
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.slide::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.35);
+
+}
+
+.slide span{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.slide:hover{
+
+transform:scale(1.04);
+
+}
+
+.slide:nth-child(1){
+
+background-image:url("https://images.unsplash.com/photo-1522337660859-02fbefca4702");
+
+}
+
+.slide:nth-child(2){
+
+background-image:url("https://images.unsplash.com/photo-1604654894610-df63bc536371");
+
+}
+
+.slide:nth-child(3){
+
+background-image:url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f");
+
+}
+
+.slide:nth-child(4){
+
+background-image:url("https://images.unsplash.com/photo-1515377905703-c4788e51af15");
+
+}
+
+/* Cards */
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+padding:35px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(255,90,150,.15);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#ff4d9d;
+
+}
+
+/* Ads */
+
+.ads{
+
+background:white;
+
+border-radius:25px;
+
+padding:30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.ads img{
+
+border-radius:20px;
+
+margin-top:20px;
+
+}
+
+/* iframe */
+
+iframe{
+
+border:none;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+/* Contact */
+
+.contact{
+
+text-align:center;
+
+background:white;
+
+border-radius:30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+padding:60px;
+
+}
+
+.contact p{
+
+margin:15px;
+
+font-size:18px;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#111;
+
+color:white;
+
+padding:40px;
+
+text-align:center;
+
+margin-top:60px;
+
+}
+
+footer p{
+
+opacity:.8;
+
+margin:5px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:42px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+.slide{
+
+min-width:280px;
+
+height:180px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Welcome to MAJESTIQ BEAUTY BAR</h1>
+
+<p>At MAJESTIQ BEAUTY BAR, we pride ourselves on providing top-notch hair services that cater to your unique style and needs. Whether you're looking for a quick transformation or a complete makeover, our skilled stylists are here to help. We offer a variety of services, including:
+</p>
+
+<button>Book Appointment</button>
+
+</header>
+
+<section>
+
+<h2>Trending Services</h2>
+
+<div class="slider">
+
+<div class="slide"><span>Basic Installation</span></div>
+
+<div class="slide"><span>Styled Installation</span></div>
+
+<div class="slide"><span>Frontal Pony</span></div>
+
+<div class="slide"><span>Braids and Cornrows</span></div>
+
+
+</section>
+
+<section>
+
+<h2>Salon Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Basic Installation</h3>
+<p>Experience a seamless look with our **Basic Installation** service. Perfect for those who want a natural appearance without the fuss. Our expert stylists ensure that your hair extensions are applied flawlessly, giving you the length and volume you desire.
+</p>
+</div>
+
+<div class="card">
+<h3>Styled Installation</h3>
+<p>Take your look to the next level with our **Styled Installation** service. This option combines installation with professional styling, ensuring you leave the salon looking and feeling fabulous. Whether it's curls, waves, or sleek straight styles, we have you covered!
+</p>
+</div>
+
+<div class="card">
+<h3>Frontal Pony</h3>
+<p>For a chic and trendy look, try our **Frontal Pony** service. This style is perfect for those who want to make a statement. Our stylists will create a stunning ponytail using high-quality extensions that blend seamlessly with your natural hair.
+</p>
+</div>
+
+<div class="card">
+<h3>Braids and Cornrows</h3>
+<p>Add some flair to your style with our **Braids and Cornrows** service. Our talented stylists will create beautiful braids that not only enhance your look but also provide a protective style for your hair.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>SHEIN Fashion Ads</h2>
+
+<div class="ads">
+
+<h3>🎉Don't miss this hot deal on SHEIN! Save big on this!</h3>
+
+<p>
+    🛒Franclia Elegant Brown Halter-Neck Mini Bodycon Dress For Women,Summer Shades Of Brown Ruffled Fit Waist Night Out Dress,Business Casual Party Attire 100+ sold
+    🎁60% OFF coupon for every new user!
+</p>
+
+<img src="https://via.placeholder.com/728x90.png?text=SHEIN+ADVERTISEMENT"
+width="100%"
+alt="Advertisement">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Relax With Music</h2>
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/album/0aCFxXlFzAm9dLtx5IFuYE?si=T-fPYQ72QIa0L0zfQtjj3w"
+width="100%"
+height="352"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</section>
+
+<section>
+
+<h2>Beauty Inspiration</h2>
+
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/playlist?list=PLuW1N2l0mban2SYa8FpHESq-ZgvY0tXq9&si=Upgve7weGvE1Nz-Z"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</section>
+
+<section class="contact">
+
+<h2>Visit Us</h2>
+
+<p>📞 +27 60 354 4524</p>
+
+
+</section>
+
+<footer>
+
+<p>© 2026 MAJESTIQ BEAUTY BAR</p>
+
+<p>Beauty • Fashion • Music</p>
+
+</footer>
+
+</body>
+</html>
