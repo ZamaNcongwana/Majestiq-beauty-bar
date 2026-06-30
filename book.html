@@ -84,51 +84,7 @@ text-align:center;
 color:#222;
 }
 
-/* Trending Slider */
-.slider{
-display:flex;
-gap:30px;
-overflow:auto;
-scroll-snap-type:x mandatory;
-padding-bottom:15px;
-}
-
-.slide{
-scroll-snap-align:center;
-min-width:350px;
-height:230px;
-border-radius:25px;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:28px;
-font-weight:600;
-color:white;
-background-size:cover;
-background-position:center;
-position:relative;
-overflow:hidden;
-transition:.4s;
-}
-
-.slide::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.35);
-}
-
-.slide span{
-position:relative;
-z-index:2;
-}
-
-.slide:hover{
-transform:scale(1.04);
-}
-
-/* ✅ CORRECT SERVICE IMAGES */
+/*✅ CORRECT SERVICE IMAGES */
 
 /* ===========================
    HEADER
@@ -249,8 +205,8 @@ margin-top:60px;
 <button>Book Appointment</button>
 </header>
 
-<!-- TRENDING SERVICES -->
 <section>
+
 <h2>Trending Services</h2>
 
 <div class="slider">
@@ -272,6 +228,7 @@ margin-top:60px;
 </div>
 
 </div>
+
 </section>
 
 <!-- SERVICES -->
