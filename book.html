@@ -130,31 +130,61 @@ transform:scale(1.04);
 
 /* ✅ CORRECT SERVICE IMAGES */
 
-/* Basic Installation */
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("images/header.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+height:90vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+padding:20px;
+color:white;
+}
+
+/* ===========================
+   TRENDING SERVICES IMAGES
+=========================== */
+
 .slide.basic{
-background-image:url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80");
+background-image:url("img/basic-ins.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
-  
-/* Styled Installation */
+
 .slide.styled{
-background-image:url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=80");
+background-image:url("img/styled-in.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
-/* Frontal Pony */
 .slide.pony{
-background-image:url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1600&q=80");
+background-image:url("img/frontal-po.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
-/* Braids and Cornrows */
 .slide.braids{
-background-image:url("https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1600&q=80");
-}
-
-/* Services Cards */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
+background-image:url("img/braids-corn.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
 .card{
