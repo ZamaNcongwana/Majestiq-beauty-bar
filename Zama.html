@@ -10,10 +10,66 @@
  <title>Basic-Installation</title>
  <meta name="viewport" content="width=device-width, initial-scale=1" >
  <link rel="stylesheet" href="basic-installation_htm_files/xr_fonts.css">
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 10); /* Adjust based on the number of images */
+}
+
+.slider-image {
+    width: 100%; /* Adjust width as needed */
+    flex: 0 0 auto; /* Prevent images from shrinking */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
  <script><!--
  if(navigator.userAgent.indexOf('MSIE')!=-1 || navigator.userAgent.indexOf('Trident')!=-1){ document.write('<link rel="stylesheet" href="basic-installation_htm_files/xr_fontsie.css">');} 
  if(navigator.userAgent.indexOf('Android')!=-1){ document.write('<link rel="stylesheet" href="basic-installation_htm_files/xr_fontsrep.css">');} 
 --></script>
+
+let slideIndex = 0;
+
+function moveSlide(n) {
+    const slides = document.querySelectorAll('.slider-image');
+    slideIndex += n;
+
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1; // Loop back to the last slide
+    } else if (slideIndex >= slides.length) {
+        slideIndex = 0; // Loop back to the first slide
+    }
+
+    const sliderContainer = document.querySelector('.slider-container');
+    const slideWidth = slides[0].clientWidth; // Get the width of the first slide
+    sliderContainer.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+}
+
  <script>document.documentElement.className="xr_bgh0";</script>
  <link rel="stylesheet" href="basic-installation_htm_files/xr_main.css">
  <link rel="stylesheet" href="basic-installation_htm_files/custom_styles.css">
@@ -86,31 +142,36 @@
  <img class="xr_ap" src="basic-installation_htm_files/94.png" alt="" title="" style="left:-14px;top:-4px;width:968px;height:248px;">
  <img class="xr_ap" src="basic-installation_htm_files/95.png" alt="" title="" style="left:10px;top:30px;width:944px;height:182px;">
  <a href="https://onelink.shein.com/41/5uz7zedp39ly" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/96.jpg" alt="" title="" style="left:390px;top:40px;width:112px;height:149px;">
- </a>
- <a href="https://onelink.shein.com/41/5uz7zedp39ly" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/97.jpg" alt="" title="" style="left:508px;top:40px;width:112px;height:150px;">
- </a>
- <a href="
-https://onelink.shein.com/41/5uz8gttj0xfz" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/98.jpg" alt="" title="" style="left:626px;top:40px;width:112px;height:149px;">
- </a>
- <a href="
-https://onelink.shein.com/41/5uz8gttj0xfz" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/99.jpg" alt="" title="" style="left:746px;top:40px;width:111px;height:148px;"/>
- </a>
- <img class="xr_ap" src="basic-installation_htm_files/100.jpg" alt="" title="" style="left:873px;top:42px;width:56px;height:80px;">
- <img class="xr_ap" src="basic-installation_htm_files/101.jpg" alt="" title="" style="left:865px;top:126px;width:85px;height:41px;">
- <img class="xr_ap" src="basic-installation_htm_files/102.jpg" alt="" title="" style="left:6px;top:186px;width:28px;height:44px;">
- <a href="https://onelink.shein.com/40/5u6gxxmo6bnw" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/103.jpg" alt="" title="" style="left:38px;top:46px;width:110px;height:146px;">
- </a>
- <a href="https://onelink.shein.com/40/5u6gxxmo6bnw" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/104.jpg" alt="" title="" style="left:156px;top:44px;width:109px;height:145px;">
- </a>
- <a href="https://onelink.shein.com/40/5u6iqnu674fl" onclick="return(xr_nn());">
-  <img class="xr_ap" src="basic-installation_htm_files/105.jpg" alt="" title="" style="left:271px;top:39px;width:115px;height:152px;">
- </a>
+  <img class="xr_ap" <div class="image-slider">
+    <div class="slider-container">
+        <a href="https://onelink.shein.com/41/5uz7zedp39ly">
+            <img class="slider-image" src="basic-installation_htm_files/96.jpg" alt="" title="">
+        </a>
+        <a href="https://onelink.shein.com/41/5uz7zedp39ly">
+            <img class="slider-image" src="basic-installation_htm_files/97.jpg" alt="" title="">
+        </a>
+        <a href="https://onelink.shein.com/41/5uz8gttj0xfz">
+            <img class="slider-image" src="basic-installation_htm_files/98.jpg" alt="" title="">
+        </a>
+        <a href="https://onelink.shein.com/41/5uz8gttj0xfz">
+            <img class="slider-image" src="basic-installation_htm_files/99.jpg" alt="" title="">
+        </a>
+        <img class="slider-image" src="basic-installation_htm_files/100.jpg" alt="" title="">
+        <img class="slider-image" src="basic-installation_htm_files/101.jpg" alt="" title="">
+        <img class="slider-image" src="basic-installation_htm_files/102.jpg" alt="" title="">
+        <a href="https://onelink.shein.com/40/5u6gxxmo6bnw">
+            <img class="slider-image" src="basic-installation_htm_files/103.jpg" alt="" title="">
+        </a>
+        <a href="https://onelink.shein.com/40/5u6gxxmo6bnw">
+            <img class="slider-image" src="basic-installation_htm_files/104.jpg" alt="" title="">
+        </a>
+        <a href="https://onelink.shein.com/40/5u6iqnu674fl">
+            <img class="slider-image" src="basic-installation_htm_files/105.jpg" alt="" title="">
+        </a>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 </div>
 </div>
 <div class="xr_app xr_page3 xr_bgn_3_0_0" id="xr_page3" style="height: 449px; left:0px;">
